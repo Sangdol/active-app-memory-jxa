@@ -1,3 +1,7 @@
+/**
+ * This gets the POSIX path of the active application
+ * and store it in the designated place.
+ */
 const runJxa = require('run-jxa');
 const notify = require('osx-notifier');
 const fs = require('fs');
@@ -19,18 +23,23 @@ const STORAGE_PATH = homedir + '/.sang_storage/active-app';
 
   const procPath = await runJxa(run);
 
-  // console.log(result);
-
   fs.writeFile(STORAGE_PATH, procPath, function (err) {
     if (err) {
       notify({
         type: 'fail',
         title: `Fail to save proc path.`,
-        message: err,
+        message: String(err),
         group: 'jxa'
       });
     } else {
-      console.log(`${procPath} is saved at ${STORAGE_PATH}`);
+      const msg = `'${procPath}' is saved at '${STORAGE_PATH}'.`;
+      notify({
+        type: 'pass',
+        title: 'A new app path is saved.',
+        message: msg,
+        group: 'jxa'
+      });
+      console.log(msg);
    }
   });
 })();
