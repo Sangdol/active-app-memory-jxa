@@ -1,6 +1,9 @@
 # Open an application with a shortcut
 
-This is a small project composed of a [JXA(JavaScript for automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script and a bash script with which you can store the currently running application path and open it later.
+This is a small project composed of two scripts:
+
+* a [JXA(JavaScript for automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script: to store the currently running application path
+* a bash script: to launch the saved application
 
 I've created these scripts to open applications with a shortcut with [Better Touch Tool](https://folivora.ai/).
 
