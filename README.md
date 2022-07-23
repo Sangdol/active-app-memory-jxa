@@ -8,12 +8,10 @@ If the answer is Yes, these scripts might be interesting for you.
 Story
 ===
 
-I use [BetterTouchTool](https://folivora.ai/) and HammerSpoon to open applications with keyboard shortcuts.
+I use [BetterTouchTool](https://folivora.ai/) to open applications with keyboard shortcuts.
 I sometimes want to open different applications with a shortcut depending on what I work on.
 
 I wrote these scripts to dynamically designate the application that I want to open with a keyboard shortcut.
-
-In hindsight, I could do it more easily with HammerSpoon, but I didn't use HammerSpoon when I wrote it.
 
 Scripts
 ===
