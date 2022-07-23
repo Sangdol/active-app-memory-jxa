@@ -1,25 +1,56 @@
-# Open an application with a shortcut
+Active App Memory JXA
+===
 
-This is a small project composed of two scripts:
+_Do you use keyboard shortcuts to open applications?_
 
-* a [JXA(JavaScript for automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script: to store the currently running application path
-* a bash script: to launch the saved application
+If the answer is Yes, these scripts might be interesting for you.
 
-I've created these scripts to open applications with a shortcut with [Better Touch Tool](https://folivora.ai/).
+Story
+===
 
-## Installation
+I use [BetterTouchTool](https://folivora.ai/) and HammerSpoon to open applications with keyboard shortcuts.
+I sometimes want to open different applications with a shortcut depending on what I work on.
+
+I wrote these scripts to dynamically designate the application that I want to open with a keyboard shortcut.
+
+In hindsight, I could do it more easily with HammerSpoon, but I didn't use HammerSpoon when I wrote it.
+
+Scripts
+===
+
+There are two scripts:
+
+* `index.js`: a [JXA(JavaScript for automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script: to store the currently running application path
+* `open-app.sh` a bash script: to launch the saved application
+
+Installation
+===
+
+The `init.sh` script creates a hidden directory to store the application path that I want to open with a shortcut.
 
 ```bash
 ./scripts/init.sh
 npm install
 ```
 
-## Usage
+Usage
+===
 
-```bash
-# To run the JXA script to save the active application path.
+### Storing the current application
+
+```sh
 node $PROJECT_HOME/active-app-memory/index.js
+```
 
-# To run a bash script to open the saved application path.
+### Opening the stored application
+
+```sh
 $HOME/projects/active-app-memory-jxa/scripts/open-app.sh
 ```
+
+If you run these scripts with keyboard shortcuts, you can open a dynamically selected application with a keyboard shortcut.
+
+License
+===
+
+MIT
