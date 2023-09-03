@@ -1,30 +1,32 @@
+_Update: Don't use these slow and complicated scripts. Try this simple [Hammerspoon script](https://github.com/Sangdol/hammerspoon-config/blob/master/quick_app.lua) instead._
+---
+
 Active App Memory JXA
 ===
 
 _Do you use keyboard shortcuts to open applications?_
 
-If the answer is Yes, these scripts might be interesting for you.
+If the answer is yes, these scripts might interest you.
 
 Story
 ===
 
-I use [BetterTouchTool](https://folivora.ai/) to open applications with keyboard shortcuts.
-I sometimes want to open different applications with a shortcut depending on what I work on.
+I use [BetterTouchTool](https://folivora.ai/) to open applications via keyboard shortcuts. Sometimes, I want to open different applications depending on what I'm working on.
 
-I wrote these scripts to dynamically designate the application that I want to open with a keyboard shortcut.
+I wrote these scripts to dynamically designate which application I want to open using a keyboard shortcut.
 
 Scripts
 ===
 
 There are two scripts:
 
-* `index.js`: a [JXA(JavaScript for automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script: to store the currently running application path
-* `open-app.sh` a bash script: to launch the saved application
+* `index.js`: a [JXA (JavaScript for Automation)](https://developer.apple.com/library/archive/releasenotes/InterapplicationCommunication/RN-JavaScriptForAutomation/Articles/Introduction.html) script to store the currently running application's path
+* `open-app.sh`: a bash script to launch the saved application
 
 Installation
 ===
 
-The `init.sh` script creates a hidden directory to store the application path that I want to open with a shortcut.
+The `init.sh` script creates a hidden directory to store the application's path that I want to open via a shortcut.
 
 ```bash
 ./scripts/init.sh
@@ -46,7 +48,7 @@ node $PROJECT_HOME/active-app-memory/index.js
 $HOME/projects/active-app-memory-jxa/scripts/open-app.sh
 ```
 
-If you run these scripts with keyboard shortcuts, you can open a dynamically selected application with a keyboard shortcut.
+If you run these scripts using keyboard shortcuts, you can open a dynamically selected application with a keyboard shortcut.
 
 License
 ===
