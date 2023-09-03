@@ -2,7 +2,7 @@
 
 APP_PATH="$(cat "$HOME/.sang_storage/active-app")"
 
-if ps -ef | grep "$APP_PATH" | grep -v grep > /dev/null; then
+if pgrep -f "$APP_PATH" > /dev/null; then
   open "$APP_PATH"
 else
   echo "$APP_PATH is not running"
